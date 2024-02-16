@@ -1,4 +1,5 @@
 *.txt
 *.yml
 *.app
+.DS_Store
 Dokerfile
