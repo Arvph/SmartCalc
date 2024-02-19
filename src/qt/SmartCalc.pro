@@ -15,17 +15,24 @@ SOURCES += \
     ../modules/service_funcs.c \
     ../modules/stack.c \
     finance_window.cpp \
+    graph.cpp \
     main.cpp \
-    mainwindow.cpp
+    mainwindow.cpp \
+    qcustomplot.cpp
 
 HEADERS += \
     ../modules/smart_calc.h \
     finance_window.h \
-    mainwindow.h
+    graph.h \
+    mainwindow.h \
+    qcustomplot.h
 
 FORMS += \
     finance_window.ui \
+    graph.ui \
     mainwindow.ui
+
+QT += printsupport
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

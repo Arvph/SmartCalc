@@ -1,6 +1,6 @@
 #include "smart_calc.h"
 
-bool is_function(char* ch, int i, int* len) {
+bool is_function(const char* ch, int i, int* len) {
   bool flag = false;
 
   if (ch[i] == 's' || ch[i] == 'c' || ch[i] == 't' || ch[i] == 'a' ||
@@ -46,7 +46,7 @@ bool is_function(char* ch, int i, int* len) {
   return flag;
 }
 
-bool is_digit(char* ch, int i) {
+bool is_digit(const char* ch, int i) {
   bool flag = false;
   if ((ch[i] >= '0' && ch[i] <= '9') || ch[i] == '.') {
     flag = true;
@@ -75,7 +75,7 @@ bool is_letter(char ch) {
   return flag;
 }
 
-bool is_sin(char* ch, int i) {
+bool is_sin(const char* ch, int i) {
   bool flag = false;
   if (ch[i] == 's' && ch[i + 1] == 'i' && ch[i + 2] == 'n') {
     flag = true;
@@ -83,7 +83,7 @@ bool is_sin(char* ch, int i) {
   return flag;
 }
 
-bool is_cos(char* ch, int i) {
+bool is_cos(const char* ch, int i) {
   bool flag = false;
   if (ch[i] == 'c' && ch[i + 1] == 'o' && ch[i + 2] == 's') {
     flag = true;
@@ -91,7 +91,7 @@ bool is_cos(char* ch, int i) {
   return flag;
 }
 
-bool is_tan(char* ch, int i) {
+bool is_tan(const char* ch, int i) {
   bool flag = false;
   if (ch[i] == 't' && ch[i + 1] == 'a' && ch[i + 2] == 'n') {
     flag = true;
@@ -99,7 +99,7 @@ bool is_tan(char* ch, int i) {
   return flag;
 }
 
-bool is_asin(char* ch, int i) {
+bool is_asin(const char* ch, int i) {
   bool flag = false;
   if (ch[i] == 'a' && ch[i + 1] == 's' && ch[i + 2] == 'i' &&
       ch[i + 3] == 'n') {
@@ -108,7 +108,7 @@ bool is_asin(char* ch, int i) {
   return flag;
 }
 
-bool is_acos(char* ch, int i) {
+bool is_acos(const char* ch, int i) {
   bool flag = false;
   if (ch[i] == 'a' && ch[i + 1] == 'c' && ch[i + 2] == 'o' &&
       ch[i + 3] == 's') {
@@ -117,7 +117,7 @@ bool is_acos(char* ch, int i) {
   return flag;
 }
 
-bool is_atan(char* ch, int i) {
+bool is_atan(const char* ch, int i) {
   bool flag = false;
   if (ch[i] == 'a' && ch[i + 1] == 't' && ch[i + 2] == 'a' &&
       ch[i + 3] == 'n') {
@@ -126,7 +126,7 @@ bool is_atan(char* ch, int i) {
   return flag;
 }
 
-bool is_ln(char* ch, int i) {
+bool is_ln(const char* ch, int i) {
   bool flag = false;
   if (ch[i] == 'l' && ch[i + 1] == 'n') {
     flag = true;
@@ -134,7 +134,7 @@ bool is_ln(char* ch, int i) {
   return flag;
 }
 
-bool is_log(char* ch, int i) {
+bool is_log(const char* ch, int i) {
   bool flag = false;
   if (ch[i] == 'l' && ch[i + 1] == 'o' && ch[i + 2] == 'g') {
     flag = true;
@@ -142,7 +142,7 @@ bool is_log(char* ch, int i) {
   return flag;
 }
 
-bool is_sqrt(char* ch, int i) {
+bool is_sqrt(const char* ch, int i) {
   bool flag = false;
   if (ch[i] == 's' && ch[i + 1] == 'q' && ch[i + 2] == 'r' &&
       ch[i + 3] == 't') {

@@ -41,26 +41,31 @@ char pop_oprt(stack_o* head);
 char peek_oprt(stack_o* head);
 
 // *** PARCER ***
-bool is_digit(char* ch, int i);
-bool is_function(char* ch, int i, int* len);
+bool is_digit(const char* ch, int i);
+bool is_function(const char* ch, int i, int* len);
 bool is_operator(char ch);
 bool is_letter(char ch);
-bool is_sin(char* ch, int i);
-bool is_cos(char* ch, int i);
-bool is_tan(char* ch, int i);
-bool is_asin(char* ch, int i);
-bool is_acos(char* ch, int i);
-bool is_atan(char* ch, int i);
-bool is_ln(char* ch, int i);
-bool is_log(char* ch, int i);
-bool is_sqrt(char* ch, int i);
+bool is_sin(const char* ch, int i);
+bool is_cos(const char* ch, int i);
+bool is_tan(const char* ch, int i);
+bool is_asin(const char* ch, int i);
+bool is_acos(const char* ch, int i);
+bool is_atan(const char* ch, int i);
+bool is_ln(const char* ch, int i);
+bool is_log(const char* ch, int i);
+bool is_sqrt(const char* ch, int i);
 bool is_end(char ch);
 
 // *** CALCULUS ***
 int to_postfix(const char* origin, char* postfix);
 void calculation(char* postfix, double x, char* result);
 
-// *** VALIDATION ***
-void credit(double amount, int month, double percent, int c_type, char* res_monthly, char* res_last, char* res_overpay, char* res_total);
+// *** FINANCE ***
+void credit(double amount, int month, double percent, int c_type,
+            char* res_monthly, char* res_last, char* res_overpay,
+            char* res_total);
+void deposit(double amount, int term, int term_per, double percent, double tax,
+             int frequency_payment, int capitalization, double replenishment,
+             double withdrawal, char* final_income, char* tax_sum, char* total);
 
 #endif

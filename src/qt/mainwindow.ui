@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>SmartCalc</string>
+   <string>smart_calc_v1</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QLabel" name="result_line">
@@ -624,7 +624,7 @@ QPushButton:pressed {
      <string>^</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_PIC">
+   <widget class="QPushButton" name="pushButton_GRAPH">
     <property name="geometry">
      <rect>
       <x>0</x>
@@ -645,7 +645,7 @@ QPushButton:pressed {
 </string>
     </property>
     <property name="text">
-     <string>Pic</string>
+     <string>Graph</string>
     </property>
    </widget>
    <widget class="QPushButton" name="pushButton_X">
@@ -776,6 +776,9 @@ QPushButton:pressed {
       <width>175</width>
       <height>24</height>
      </rect>
+    </property>
+    <property name="text">
+     <string>0</string>
     </property>
    </widget>
    <widget class="QPushButton" name="pushButton_ln">

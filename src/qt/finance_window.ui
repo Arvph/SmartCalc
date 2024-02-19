@@ -82,7 +82,7 @@ QPushButton:pressed {
 }</string>
    </property>
    <property name="currentIndex">
-    <number>1</number>
+    <number>0</number>
    </property>
    <widget class="QWidget" name="creditWidget">
     <widget class="QPushButton" name="calculate_credit">
@@ -802,7 +802,7 @@ QPushButton:pressed {
     <widget class="QPushButton" name="calculate_invest">
      <property name="geometry">
       <rect>
-       <x>222</x>
+       <x>220</x>
        <y>360</y>
        <width>100</width>
        <height>32</height>
@@ -975,7 +975,7 @@ QPushButton:pressed {
       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;Yearly interest rate:&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
      </property>
     </widget>
-    <widget class="QLineEdit" name="credit_rate_2">
+    <widget class="QLineEdit" name="invest_rate">
      <property name="geometry">
       <rect>
        <x>138</x>
@@ -1015,7 +1015,7 @@ QPushButton:pressed {
       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;Frequency of payments&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
      </property>
     </widget>
-    <widget class="QComboBox" name="comboBox_payment_3">
+    <widget class="QComboBox" name="comboBox_invest_term">
      <property name="geometry">
       <rect>
        <x>144</x>
@@ -1095,12 +1095,36 @@ QPushButton:pressed {
       </font>
      </property>
     </widget>
+    <widget class="QLabel" name="label_38">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>220</y>
+       <width>111</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>15</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel {
+	border: 1px solid gray
+}
+</string>
+     </property>
+     <property name="text">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;Withdrawal&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+    </widget>
     <widget class="QLabel" name="label_39">
      <property name="geometry">
       <rect>
        <x>10</x>
-       <y>190</y>
-       <width>121</width>
+       <y>185</y>
+       <width>111</width>
        <height>31</height>
       </rect>
      </property>
@@ -1122,9 +1146,9 @@ QPushButton:pressed {
     <widget class="QLineEdit" name="invest_replenishment">
      <property name="geometry">
       <rect>
-       <x>10</x>
-       <y>220</y>
-       <width>181</width>
+       <x>130</x>
+       <y>185</y>
+       <width>191</width>
        <height>31</height>
       </rect>
      </property>
@@ -1133,6 +1157,28 @@ QPushButton:pressed {
        <pointsize>15</pointsize>
        <bold>true</bold>
       </font>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="invest_withdrawal">
+     <property name="geometry">
+      <rect>
+       <x>130</x>
+       <y>220</y>
+       <width>191</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>15</pointsize>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string/>
      </property>
     </widget>
     <widget class="QComboBox" name="comboBox_invest_freq">
@@ -1162,16 +1208,6 @@ QPushButton:pressed {
      </item>
      <item>
       <property name="text">
-       <string>Twice a year</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Quarterly</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
        <string>Monthly</string>
       </property>
      </item>
@@ -1180,7 +1216,7 @@ QPushButton:pressed {
      <property name="geometry">
       <rect>
        <x>40</x>
-       <y>246</y>
+       <y>248</y>
        <width>231</width>
        <height>16</height>
       </rect>
@@ -1335,42 +1371,6 @@ QPushButton:pressed {
      <property name="text">
       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;Total:&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
      </property>
-    </widget>
-    <widget class="QComboBox" name="comboBox_payment_5">
-     <property name="geometry">
-      <rect>
-       <x>140</x>
-       <y>190</y>
-       <width>117</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QComboBox {
-	border: 1px solid gray;
-	background-color: rgb(215, 215, 215);
-}</string>
-     </property>
-     <item>
-      <property name="text">
-       <string>Once a year</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Twice a year</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Quarterly</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Monthly</string>
-      </property>
-     </item>
     </widget>
    </widget>
   </widget>

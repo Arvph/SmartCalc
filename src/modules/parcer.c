@@ -1,6 +1,6 @@
 #include "smart_calc.h"
 
-int priority(char* ch, int i) {
+int priority(const char* ch, int i) {
   int flag = 0;
   if (ch[i] == '+' || ch[i] == '-') {
     flag = 1;
@@ -33,8 +33,8 @@ void digit_to_postfix(bool* prev_digit, char* postfix, int* j, char ch) {
   *prev_digit = true;
 }
 
-void minus_to_postfix(bool* prev_digit, char* origin, char* postfix, int i,
-                      int* j, stack_o* head) {
+void minus_to_postfix(bool* prev_digit, const char* origin, char* postfix,
+                      int i, int* j, stack_o* head) {
   *prev_digit = false;
   char ch = origin[i];
   if (i == 0 || origin[i + 1] == '(' || origin[i - 1] == '(') {
@@ -81,8 +81,8 @@ int close_brackets(bool* prev_digit, char* postfix, int* j, stack_o* head) {
   return flag;
 }
 
-void func_to_postfix(stack_o* head, int len, char* origin, int i, char* postfix,
-                     int* j) {
+void func_to_postfix(stack_o* head, int len, const char* origin, int i,
+                     char* postfix, int* j) {
   if (postfix == NULL && origin != NULL) {
     int n = 0;
     char func_name[10] = {0};
