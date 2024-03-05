@@ -21,3 +21,9 @@ uninstall:
 	@rm -rf ./build/$(TARGET).app
 # @rm -rf ~/Desktop/$(TARGET).app
 	@echo ">>>  SmartCalc removed  <<<"
+
+
+
+format: 
+	@clang-format -i src/modules/*.c src/modules/*.h
+	@clang-format -i src/qt/*.cpp src/qt/*.h
